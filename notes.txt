@@ -1,0 +1,26 @@
+
+
+
+package.json -> The package. json file is the heart of any 
+                Node project. It records important metadata about 
+                a project which is required before publishing to NPM, 
+                and also defines functional attributes of a project that
+                 npm uses to install dependencies, run scripts,
+                  and identify the entry point to our package.
+
+nodemon app.js-> It is a tool that helps develop node.js based 
+                appications by automatically restarting the node application.
+node app.js ->  
+
+
+
+FIREBASE
+What is meant by Realtime Database?
+A real-time database is broadly defined as a data store
+designed to collect, process, and/or enrich an incoming series 
+of data points (i.e., a data stream) in real time, typically immediately 
+after the data is created.
+
+->here firebase will be used for only storage purpose.
+->we can use firebase storage here we can create oue own security roles.
+

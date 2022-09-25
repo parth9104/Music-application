@@ -1,0 +1,18 @@
+cd -> to get in a in directory or folder.
+
+npm create react-app ./ -> to make a react app 
+
+npm install yarn --global -> to install yarn
+
+Difference between yarn and npm (yarn is more secure and part of npm where as npm install all extra packages but yarn install required packages only.)
+
+npm init -> for package.json (creates packge.json file)
+npm add express nodemon
+
+npm add cors
+
+npm start -> to check the listing or not 
+
+npm install -D tailwindcss postcss autofixer -> for installing tailwind css
+npm audir fix --force -> to fix severity vulnea=rabilities
+npx tailwindcss init -p ->(npx comes with npm when we install it helps to run packages which we do not need to intall it)
