@@ -16,3 +16,10 @@ npm start -> to check the listing or not
 npm install -D tailwindcss postcss autofixer -> for installing tailwind css
 npm audit fix --force -> to fix severity vulnearabilities
 npx tailwindcss init -p ->(npx comes with npm when we install it helps to run packages which we do not need to intall it)
+
+
+
+
+-> installation from extension
+install es7 react snippet
+install tailwind css

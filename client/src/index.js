@@ -11,7 +11,9 @@ HTML code and an HTML element. The purpose of the function
 /*What is the strict mode in React?
 StrictMode is a tool for highlighting potential problems in 
 an application. Like Fragment , StrictMode does not render 
-any visible UI. */
+any visible UI. 
+.render function will helper to render a react app 
+*/
 ReactDOM.render(
    <React.StrictMode>
     <App/>

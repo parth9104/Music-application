@@ -1,3 +1,9 @@
+/*
+this tailwind css config 
+source code:   
+https://gist.github.com/Vetrivel-VP/c6848aa8538487c53edfd14c2d4393f2
+*/
+
 module.exports = {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     theme: {

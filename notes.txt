@@ -24,3 +24,8 @@ after the data is created.
 ->here firebase will be used for only storage purpose.
 ->we can use firebase storage here we can create oue own security roles.
 
+
+->Tailwind CSS makes styling React components easier! To use plain CSS,
+ add the CSS to App. css. With Tailwind CSS, you don't need to write 
+ the CSS rules for each class.
+
