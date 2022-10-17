@@ -16,16 +16,28 @@ JSX stands for JavaScript XML. It is simply a syntax
  /* once the user login then navigate will use for navigate back to home page */ 
  import React from 'react'
   import {app} from '../config/firebase.config'
-  import { getAuth,GoogleAuthProvider } from 'firebase/auth'
+  import { getAuth,GoogleAuthProvider ,signInWithPopup} from 'firebase/auth'
   import {FcGoogle} from 'react-icons/fc'
   import { useNavigate } from 'react-router-dom'
-  const Login = () => {
+  const Login = ({setAuth}) => {
     const firebaseAuth = getAuth(app);
     const provider = new GoogleAuthProvider();
-    /*const navigate = useNavigate();*/
+    const navigate = useNavigate();
     const loginWithGoogle = async () => {
-        console.log('hii');
-    }
+       await signInWithPopup(firebaseAuth, provider).then((userCred)=>{
+        firebaseAuth.onAuthStateChanged((userCred) => {
+          if (userCred) {
+             userCred.getIdToken().then((token) => {
+                console.log(token);
+             })
+          }
+          else {
+             setAuth(false);
+             window.localStorage.setItem("auth", "false");
+             navigate("/login")
+          }
+       })
+      })}
     return (
       <div className='relative w-screen h-screen'>
         <div className='absolute inset-0 bg-darkOverlay flex items-center p-4 justify-center'>
