@@ -29,3 +29,5 @@ after the data is created.
  add the CSS to App. css. With Tailwind CSS, you don't need to write 
  the CSS rules for each class.
 
+->models folder
+ we will create diff diff models for database.  models means schema.

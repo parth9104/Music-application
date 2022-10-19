@@ -23,3 +23,10 @@ npm add firebase framer-motion axios ->adding firebase to project(franer-motion 
 -> installation from extension
 install es7 react snippet
 install tailwind css
+
+
+
+//->Server side commands
+1.npm add mongoose
+2.npm add dotenv (in front end side we can access .env file without this but not at back end)
+3.(firebase packge for admin) npm add firebase admin && npm install --save firebase-admin
