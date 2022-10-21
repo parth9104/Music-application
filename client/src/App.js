@@ -1,4 +1,4 @@
-// import { getAuth } from 'firebase/auth'
+
 import React, { useEffect, useState } from 'react'
 /* Routes navigate the user to specific browser
 like here we have login to home and vice-versa*/
@@ -6,7 +6,6 @@ import { Route, Routes, useNavigate } from 'react-router-dom'
 import { Home, Login } from './components'
 import { app } from './config/firebase.config'
 import { getAuth } from 'firebase/auth'
-
 
 
 
