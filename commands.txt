@@ -30,3 +30,20 @@ install tailwind css
 1.npm add mongoose
 2.npm add dotenv (in front end side we can access .env file without this but not at back end)
 3.(firebase packge for admin) npm add firebase admin && npm install --save firebase-admin
+
+//->client side
+1. npm install framer-motion(->What is framer-motion?
+A simple and powerful React animation library. Visit Snyk Advisor to see a full health score report for framer-motion, including popularity, security, maintenance & community analysis.)
+2. npm install axios ->(What is Axios npm?
+Axios is a Javascript library that implements the Promise API, which is native to JS ES6 and is used to make HTTP requests from node. js or XMLHttpRequests from the browser)
+
+
+
+
+
+video 01 
+->validating user who tryong to authenticate by gmail
+video 02
+->navigated menu along with animation
+->trigger sign out
+video 03

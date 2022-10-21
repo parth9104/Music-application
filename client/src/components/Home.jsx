@@ -6,11 +6,13 @@ JSX stands for JavaScript XML. It is simply a syntax
   simple template language instead it comes with the 
   full power of JavaScript */
   import React from 'react'
+import { Header } from '.';
   
-  const home = () => {
-    return (
-      <div>home</div>
-    )
+  const Home = () => {
+    return <div className="w-full h-auto flex flex-col items-center justify-center">
+      <Header/>
+    </div>;
+    
   }
   
-  export default home
+  export default Home

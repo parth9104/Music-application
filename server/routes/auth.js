@@ -8,7 +8,9 @@ const jwt = require('jsonwebtoken');
 const user = require("../models/user");
 const admin = require("../config/firebase.config"); //imported admin privilages
 
-// e purpose of async / await is to simplify the syntax necessary to consume promise-based APIs. The behavior of async / await is similar to combining generators and promises. Async functions always return a promise.
+// The main benefits of asynchronous programming using async / await include the following: Increase the performance and responsiveness of your application, particularly when you have long-running operations that do not require to block the execution.
+
+// purpose of async / await is to simplify the syntax necessary to consume promise-based APIs. The behavior of async / await is similar to combining generators and promises. Async functions always return a promise.
 router.get("/login", async (req, res) => {
     if (!req.headers.authorization){
         //500 means internal server error
@@ -27,10 +29,11 @@ router.get("/login", async (req, res) => {
                 //checking user exist or not 
                 const userExists = await user.findOne({"user_id": decodeValue.user_id})
                 if(!userExists){
-                        newUserData(decodeValue, req, res)
+                        newUserData(decodeValue, req, res)//for creating new user
                 }
                 else{
-                    return res.send("Need to update")
+                    updateUserData(decodeValue, req, res)
+                    //for already exsting user
                 }
          }}
          catch(error){
@@ -57,7 +60,28 @@ router.get("/login", async (req, res) => {
         }
 
     }
-    
+    // db.collection.findOneAndUpdate()
+       //->db.collection.findOneAndUpdate()
+      //  updates the first matching document in the collection that matches the filter. If no document matches the filter, no document is updated.(filter and update is parameter) upset -> if no data found will make new one.
+    const updateUserData = async (decodeValue, req, res) => {
+     const filter = {user_id : decodeValue.user_id};
+      
+     const option = {
+           upset : true,
+           new : true
+     };
+     try{
+     const result = await user.findOneAndUpdate(
+        filter,
+        {auth_time : decodeValue.auth_time},
+        option
+     );
+     res.status(200).send({user : result})
+     }
+     catch(error){
+        res.status(400).send({ success: false, msg: error
+     })}
+    }
     module.exports = router;
     
 

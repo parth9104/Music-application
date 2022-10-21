@@ -31,3 +31,10 @@ after the data is created.
 
 ->models folder
  we will create diff diff models for database.  models means schema.
+
+
+
+
+ ->why bearer with token for authorizarion
+ Long before bearer authorization, this header was used for Basic authentication. For interoperability, the use of these headers is governed by W3C norms, so even if you're reading and writing the header, you should follow them. Bearer distinguishes the type of Authorization you're using, so it's important.
+ Bearer Tokens are the predominant type of access token used with OAuth 2.0. A Bearer Token is an opaque string, not intended to have any meaning to clients using it.
